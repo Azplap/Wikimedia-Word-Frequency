@@ -2,15 +2,18 @@
 This script returns the frequency of each word inside of a text file.
 
 Input: text file
-Output: ?
+Output: returns list in console
 
 """
 from collections import defaultdict
+
+# reads in txt file + converts to list of strings
 def read_txt_file(file):
     with open(file, errors="ignore") as f:
         content = f.read().split()
     return content
 
+# counts string freq w/ hash table
 def count_freq(words):
     d=defaultdict(int)
     for x in words:

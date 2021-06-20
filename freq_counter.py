@@ -4,6 +4,11 @@ This script returns the frequency of each word inside of a text file.
 Input: text file
 Output: returns list in console
 
+Possible improvements:
+- workaround weird symbols and spelling mistakes?
+- improve big O ?
+- display results outside of console
+
 """
 from collections import defaultdict
 
@@ -22,7 +27,7 @@ def count_freq(words):
 
 
 if __name__ == "__main__":
-    file_name = 'description.txt'
+    file_name = 'test_docs/description.txt'
     words = read_txt_file(file_name)
     dictionary = count_freq(words)
     sorted_dictionary = sorted(dictionary.items(), key=lambda kv: kv[1], reverse=True)
